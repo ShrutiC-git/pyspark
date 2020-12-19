@@ -5,6 +5,7 @@ from pyspark import SparkConf, SparkContext
 from numpy import array
 
 # Boilerplate Spark stuff:
+#we are using a SparkContext instead of a SparkSession. SparkSession is a more conducive approacha s it allows us to use dataframes, which are essentially like a pandas dataframe
 conf = SparkConf().setMaster("local").setAppName("SparkDecisionTree")
 sc = SparkContext(conf = conf)
 
